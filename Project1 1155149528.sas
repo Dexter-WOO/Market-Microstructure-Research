@@ -51,4 +51,3 @@ quit;
 proc sort data = average_ratio; by descending average_ratio ; run; 
 /*Keep the first 30 stocks and save the results.*/
 data project1.project1_result; set average_ratio (obs = 30); run; 
-
