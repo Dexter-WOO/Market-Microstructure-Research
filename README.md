@@ -1,4 +1,4 @@
-# Predict Retail Trading Activities with Google Search Volume Index
+# Predict Retail Trading Activities with Google Search Volume Index (SVI)
 We contrust some regression model to predict retail trading activities with Google Search Volume Index (SVI). The regression model will be
 <p align="center">
 <img src=
