@@ -1,13 +1,41 @@
-# Retail-Trading-and-Google-Trends
-## Introduction
+# Predict Retail Trading Activities with Google Search Volume Index
+We contrust some regression model to predict retail trading activities with Google Search Volume Index (SVI). The regression model will be
 <p align="center">
-  <img src="https://latex.codecogs.com/png.latex?%5Cbg_white%20Y_%7Bi%2Ct%7D%3D%5Cbeta%20_%7B0%7D&plus;%5Cbeta%20_%7B1%7DX_%7B0%2Ci%2Ct-1%7D&plus;%5Csum_%7Bk%3D1%7D%5E%7BK%7D%5Clambda%20_%7Bk%7DX_%7Bk%2Ci%2Ct-1%7D&plus;%5Cvarepsilon%20_%7Bi%2Ct%7D"/>
+<img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+Y_%7Bi%2Ct%7D%3D%5Cbeta+_%7B0%7D%2B%5Cbeta+_%7B1%7DX_%7B0%2Ci%2Ct-1%7D%2B%5Csum_%7Bk%3D1%7D%5E%7BK%7D%5Clambda+_%7Bk%7DX_%7Bk%2Ci%2Ct-1%7D%2B%5Cvarepsilon+_%7Bi%2Ct%7D" 
+alt="Y_{i,t}=\beta _{0}+\beta _{1}X_{0,i,t-1}+\sum_{k=1}^{K}\lambda _{k}X_{k,i,t-1}+\varepsilon _{i,t}">
 </p>
 
-![equation](https://latex.codecogs.com/png.latex?%5Cbg_white%20Y_%7Bi%2Ct%7D%3D%5Cbeta%20_%7B0%7D&plus;%5Cbeta%20_%7B1%7DX_%7B0%2Ci%2Ct-1%7D&plus;%5Csum_%7Bk%3D1%7D%5E%7BK%7D%5Clambda%20_%7Bk%7DX_%7Bk%2Ci%2Ct-1%7D&plus;%5Cvarepsilon%20_%7Bi%2Ct%7D)
+
+where <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+Y_%7Bi%2Ct%7D" 
+alt="Y_{i,t}"> is the dependent variable for stock <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+i" 
+alt="i"> on day <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+t" 
+alt="t">, <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+X_%7B0%2Ci%2Ct%7D" 
+alt="X_{0,i,t}"> is the independent variable for stock <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+i" 
+alt="i"> on day <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+t-1" 
+alt="t-1">, <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+X_%7Bk%2Ci%2Ct-1%7D" 
+alt="X_{k,i,t-1}"> is the <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+k%5E%7Bth%7D" 
+alt="k^{th}"> control variable for stock <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+i" 
+alt="i"> on day <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+t-1" 
+alt="t-1">.
+
+We use SVI as our independent variable and dependent variable includes: retail to total trading volume ratio, retail trading volume, and stock return.
+
+## Data
+The trading data can be retrieved from CRSP, [WRDS](https://wrds-www.wharton.upenn.edu/). Then, we use the idea of Boehmer et al. (2021) to identify retail trades [here](https://github.com/Dexter-WOO/Retail-Trading-and-Google-Trends/blob/main/catch_retail_trading.sas). The data output will be used for computing all the dependent variables for the regression model. Based on the idea of Da, Engelberg, and Gao (2011), we want to use SVI to predict the retail trading activities. SVI can be downloaded from [Google Trends](https://trends.google.com/trends/?geo=US). Lastly, we use all these data to build the regression model [here](https://github.com/Dexter-WOO/Retail-Trading-and-Google-Trends/blob/main/svi_predict_retail_trading.sas).
 
 ## Results
-
+(still in progress)
 ## References
 1. BOEHMER, E., JONES, C.M., ZHANG, X. and ZHANG, X. (2021), Tracking Retail Investor Activity. The Journal of Finance, 76: 2249-2305. https://doi.org/10.1111/jofi.13033
 2. DA, Z., ENGELBERG, J. and GAO, P. (2011), In Search of Attention. The Journal of Finance, 66: 1461-1499. https://doi.org/10.1111/j.1540-6261.2011.01679.x
