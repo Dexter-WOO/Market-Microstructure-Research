@@ -1,6 +1,6 @@
 # Retail-Trading-and-Google-Trends
 ## Introduction
-
+![equation](https://latex.codecogs.com/svg.latex?Y_%7Bi%2Ct%7D%3D%5Cbeta%20_%7B0%7D&plus;%5Cbeta%20_%7B1%7DX_%7B0%2Ci%2Ct-1%7D&plus;%5Csum_%7Bk%3D1%7D%5E%7BK%7D%5Clambda%20_%7Bk%7DX_%7Bk%2Ci%2Ct-1%7D&plus;%5Cvarepsilon%20_%7Bi%2Ct%7D)
 ## Results
 
 ## References
