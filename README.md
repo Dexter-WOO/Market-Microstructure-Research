@@ -31,7 +31,7 @@ alt="t-1">.
 
 We use SVI as our independent variable and dependent variable includes: retail to total trading volume ratio, retail trading volume, and stock return.
 
-## Data
+## Data Collection
 The trading data can be retrieved from CRSP, [WRDS](https://wrds-www.wharton.upenn.edu/). Then, we use the idea of Boehmer et al. (2021) to identify retail trades [here](https://github.com/Dexter-WOO/Retail-Trading-and-Google-Trends/blob/main/catch_retail_trading.sas). The data output will be used for computing all the dependent variables for the regression model. Based on the idea of Da, Engelberg, and Gao (2011), we want to use SVI to predict the retail trading activities. SVI can be downloaded from [Google Trends](https://trends.google.com/trends/?geo=US). Lastly, we use all these data to build the regression model [here](https://github.com/Dexter-WOO/Retail-Trading-and-Google-Trends/blob/main/svi_predict_retail_trading.sas).
 
 ## Data Cleansing
