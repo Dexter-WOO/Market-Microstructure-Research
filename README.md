@@ -1,4 +1,5 @@
-# Predict Retail Trading Activities with Google Search Volume Index (SVI)
+# Market Microstructure Research
+## Predict Retail Trading Activities with Google Search Volume Index (SVI)
 We contrust some regression model to predict retail trading activities with Google Search Volume Index (SVI). The naive regression model will be
 <p align="center">
 <img src=
@@ -31,14 +32,14 @@ alt="t-1">.
 
 We use SVI as our independent variable and dependent variable includes: retail to total trading volume ratio, retail trading volume, and stock return.
 
-## Data Collection
+### Data Collection
 The trading data can be retrieved from CRSP, [WRDS](https://wrds-www.wharton.upenn.edu/). Then, we use the idea of Boehmer et al. (2021) to identify retail trades [here](https://github.com/Dexter-WOO/Retail-Trading-and-Google-Trends/blob/main/catch_retail_trading.sas). The data output will be used for computing all the dependent variables for the regression model. Based on the idea of Da, Engelberg, and Gao (2011), we want to use SVI to predict the retail trading activities. SVI can be downloaded from [Google Trends](https://trends.google.com/trends/?geo=US). Lastly, we use all these data to build the regression model [here](https://github.com/Dexter-WOO/Retail-Trading-and-Google-Trends/blob/main/svi_predict_retail_trading.sas).
 
-## Data Cleansing
+### Data Cleansing
 Some tickers with a generic meaning usually have an abnormally high SVI, such as "BB", "BABY", etc., so we have to remove these noisy tickers in our dataset. Besides, we want to include only small stocks because those are the stocks that are normally traded by retail investors, also having a decent SVI. 
 
-## Results
+### Results
 (still in progress)
-## References
+### References
 1. BOEHMER, E., JONES, C.M., ZHANG, X. and ZHANG, X. (2021), Tracking Retail Investor Activity. The Journal of Finance, 76: 2249-2305. https://doi.org/10.1111/jofi.13033
 2. DA, Z., ENGELBERG, J. and GAO, P. (2011), In Search of Attention. The Journal of Finance, 66: 1461-1499. https://doi.org/10.1111/j.1540-6261.2011.01679.x
