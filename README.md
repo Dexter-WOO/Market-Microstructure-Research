@@ -1,4 +1,10 @@
 # Market Microstructure Research
+
+-	[[1st Project](https://github.com/Dexter-WOO/Market-Microstructure-Research/blob/main/catch_retail_trading.sas)] Identified retail trades by finding trades that occur off-exchange and with fractional pennies 
+-	[[2nd Project](https://github.com/Dexter-WOO/Market-Microstructure-Research/blob/main/svi_predict_retail_trading.sas)] Built regression models to predict retail trading activities with Google Search Volume Index (SVI)
+-	[[3rd Project](https://github.com/Dexter-WOO/Market-Microstructure-Research/blob/main/the_lost_liquidity.sas)] Researched how retail traders lose information due to the lack of odd-lot trades information in Trade and Quote (TAQ) data compared to proprietary data
+
+
 ## Predict Retail Trading Activities with Google Search Volume Index (SVI)
 We contrust some regression model to predict retail trading activities with Google Search Volume Index (SVI). The naive regression model will be
 <p align="center">
@@ -38,8 +44,6 @@ The trading data can be retrieved from CRSP, [WRDS](https://wrds-www.wharton.upe
 ### Data Cleansing
 Some tickers with a generic meaning usually have an abnormally high SVI, such as "BB", "BABY", etc., so we have to remove these noisy tickers in our dataset. Besides, we want to include only small stocks because those are the stocks that are normally traded by retail investors, also having a decent SVI. 
 
-### Results
-(still in progress)
 ### References
 1. BOEHMER, E., JONES, C.M., ZHANG, X. and ZHANG, X. (2021), Tracking Retail Investor Activity. The Journal of Finance, 76: 2249-2305. https://doi.org/10.1111/jofi.13033
 2. DA, Z., ENGELBERG, J. and GAO, P. (2011), In Search of Attention. The Journal of Finance, 66: 1461-1499. https://doi.org/10.1111/j.1540-6261.2011.01679.x
